@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import cl.duoc.week2.domain.Pelicula;
+import cl.duoc.week2.domain.exceptions.PeliculaNoEncontradaException;
 import cl.duoc.week2.repository.IPeliculaRepository;
-import domain.Pelicula;
-import domain.exceptions.PeliculaNoEncontradaException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,6 +1,6 @@
 package cl.duoc.week2.web.dtos;
 
-import domain.Pelicula;
+import cl.duoc.week2.domain.Pelicula;
 
 public record PeliculaResponse(
     Long id,

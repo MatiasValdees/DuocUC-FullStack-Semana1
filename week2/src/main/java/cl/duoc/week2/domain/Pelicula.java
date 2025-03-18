@@ -1,4 +1,4 @@
-package domain;
+package cl.duoc.week2.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

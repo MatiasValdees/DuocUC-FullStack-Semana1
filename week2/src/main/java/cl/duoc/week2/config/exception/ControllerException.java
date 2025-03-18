@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import domain.exceptions.PeliculaNoEncontradaException;
+import cl.duoc.week2.domain.exceptions.PeliculaNoEncontradaException;
 
 @ControllerAdvice
 public class ControllerException {

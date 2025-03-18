@@ -3,9 +3,9 @@ package cl.duoc.week2.repository.data;
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Director;
-import domain.Genero;
-import domain.Pelicula;
+import cl.duoc.week2.domain.Director;
+import cl.duoc.week2.domain.Genero;
+import cl.duoc.week2.domain.Pelicula;
 
 public class Peliculas {
     public static final List<Pelicula> peliculas = new ArrayList<>();
