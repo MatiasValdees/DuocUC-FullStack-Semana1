@@ -5,9 +5,9 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
+import cl.duoc.week2.domain.Pelicula;
 import cl.duoc.week2.repository.IPeliculaRepository;
 import cl.duoc.week2.repository.data.Peliculas;
-import domain.Pelicula;
 
 @Repository
 public class PeliculaRepository implements IPeliculaRepository{
