@@ -1,6 +1,6 @@
 package cl.duoc.week2.web.dtos;
 
-import cl.duoc.week2.domain.Pelicula;
+import cl.duoc.week2.domain.PeliculaEntity;
 
 public record PeliculaResponse(
     Long id,
@@ -11,7 +11,7 @@ public record PeliculaResponse(
     String sinopsis
 ) {
 
-    public static PeliculaResponse fromDomain(Pelicula domain){
+    public static PeliculaResponse fromDomain(PeliculaEntity domain){
         return new PeliculaResponse(domain.getId(),
                                     domain.getTitulo(),
                                     domain.getAño(),
