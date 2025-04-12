@@ -10,6 +10,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
@@ -18,6 +19,7 @@ import lombok.Setter;
 @Builder
 @Entity
 @Table(name="DIRECTORES")
+@ToString
 public class DirectorEntity {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

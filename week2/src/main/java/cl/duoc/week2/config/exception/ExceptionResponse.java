@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ExceptionResponse {
+public class ExceptionResponse<T> {
     private String code;
-    private String message;
+    private T message;
 }

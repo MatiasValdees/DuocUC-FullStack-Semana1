@@ -25,7 +25,7 @@ public class PeliculaEntity {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String titulo;
-    private int año;
+    private int annio;
     @ManyToOne
     @JoinColumn(name="genero_id")
     private GeneroEntity genero;

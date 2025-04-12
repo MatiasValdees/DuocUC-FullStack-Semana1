@@ -14,7 +14,7 @@ public record PeliculaResponse(
     public static PeliculaResponse fromDomain(PeliculaEntity domain){
         return new PeliculaResponse(domain.getId(),
                                     domain.getTitulo(),
-                                    domain.getAño(),
+                                    domain.getAnnio(),
                                     domain.getDirector().getNombre(),
                                     domain.getGenero().getNombre(),
                                     domain.getSinopsis()
