@@ -3,11 +3,13 @@ package cl.duoc.fullstack.web;
 import cl.duoc.fullstack.mocks.PeliculaMock;
 import cl.duoc.fullstack.service.PeliculaService;
 import cl.duoc.fullstack.web.dtos.PeliculaUpdateRequest;
+import cl.duoc.fullstack.web.hateoas.PeliculaModelAssembler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
@@ -21,6 +23,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@Import(PeliculaModelAssembler.class)
 @WebMvcTest(PeliculaController.class)
 public class PeliculaControllerTest {
 
@@ -54,8 +57,6 @@ public class PeliculaControllerTest {
                 .andExpect(jsonPath("$.data.año").value(1972))
                 .andExpect(jsonPath("$.data.genero").value("Acción"))
                 .andExpect(jsonPath("$.data.director").value("Francis Ford Coppola"));
-
-
     }
 
     @Test
@@ -81,9 +82,9 @@ public class PeliculaControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.status").value("OK"))
-                .andExpect(jsonPath("$.data").isArray())
-                .andExpect(jsonPath("$.data",hasSize(2)))
-                .andExpect(jsonPath("$.data[0].id").value(1L))
+                .andExpect(jsonPath("$.data.content").isArray())
+                .andExpect(jsonPath("$.data.content",hasSize(2)))
+                .andExpect(jsonPath("$.data.content[0].id").value(1L))
                 //Testear Response completo
         // .andExpect(content().json(mapper.writeValueAsString()))
         ;
